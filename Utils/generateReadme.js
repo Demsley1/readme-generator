@@ -5,7 +5,7 @@ const fs = require('fs');
 const writeToFile = data => {
     // create a promise object for creating a new readme file using template data.
     return new Promise((resolve, reject) => {
-        fs.writeFile('./dist/readme.md', data, err => {
+        fs.writeFile('./Dist/readme.md', data, err => {
             if(err){
                 reject(err);
                 return;
