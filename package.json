@@ -1,0 +1,22 @@
+{
+  "name": "readme-generator",
+  "version": "1.0.0",
+  "description": "create a quality readme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Demsley1/readme-generator.git"
+  },
+  "author": "Demsley1",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Demsley1/readme-generator/issues"
+  },
+  "homepage": "https://github.com/Demsley1/readme-generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.0"
+  }
+}
