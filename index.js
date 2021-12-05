@@ -1,8 +1,11 @@
+// add inquire module from npm website
 const inquirer = require('inquirer');
+// add fucntions returned from page that creates the readme template
 const markDown = require('./Utils/generateMarkdown')
+// add function to create the readme file using the teplate from markDown
 const { writeToFile } = require('./Utils/generateReadme')
 
-// Create an array of questions for user input
+// Create an array of questions for user input using inquirer modules rules
 const promptUser = () => {
     return inquirer.prompt ([
         {
@@ -48,6 +51,7 @@ const promptUser = () => {
 };
 
 const projectPrompt = projectData => {
+    // create an array for the project data if one doesnt exist already
     if(!projectData.projects){
         projectData.projects = [];
     }
@@ -148,6 +152,7 @@ const projectPrompt = projectData => {
     });
 }
 
+// run the prompts and then return the answers to be used again for another instance of .then() methods.
 promptUser()
     .then(projectPrompt)
     .then(projectData => {

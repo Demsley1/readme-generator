@@ -125,9 +125,12 @@ const generateMarkdown = (data, questions) => {
 `;
 }
 
+//export returned data using the answer objects and array returned from the main index page as parameters.
 module.exports = templateData => {
+  // deconstruct projects array and all other information as questions from templateData parameter rederncing an object
   const {projects, ...questions} = templateData;
 
+  // create a variable to target first index of project array to be used as parameter in generate markdown function, and return the function results of generate markdown.
   var projectData = projects[0];
   return generateMarkdown(projectData, questions);
 }
