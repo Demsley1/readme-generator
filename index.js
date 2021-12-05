@@ -1,7 +1,8 @@
 const inquirer = require('inquirer');
 const markDown = require('./Utils/generateMarkdown')
+const { writeToFile } = require('./Utils/generateReadme')
 
-// TODO: Create an array of questions for user input
+// Create an array of questions for user input
 const promptUser = () => {
     return inquirer.prompt ([
         {
@@ -11,8 +12,8 @@ const promptUser = () => {
                 if(name){
                     return true;
                 }
-                else{
-                    console.log("Provide your name")
+                else {
+                    console.log("Your name is required, provide a relevant value")
                     return false;
                 }
             },
@@ -109,16 +110,14 @@ const projectPrompt = projectData => {
             }
         },
         {
-            type: 'checkbox',
-            name: 'contibution',
-            message: 'Create a list of rules for contribution:',
-            choices:['Code of Conduct', 'Issues', 'Pull request'],
-            validate: code => {
-                if(code){
+            name: 'contribution',
+            message: 'Create a list of rules for contribution (write your contribtuion rules as a markdown list using "-" to signify each point):',
+            validate: contribute => {
+                if(contribute){
                     return true;
                 }
                 else {
-                    console.log("It is recommended that you choose at least one option to provide some sort of guidlines to be used for when users want to contribute")
+                    console.log("It is recommended that you write down rules for contributig to the project")
                     return false;
                 }
             }
@@ -152,5 +151,14 @@ const projectPrompt = projectData => {
 promptUser()
     .then(projectPrompt)
     .then(projectData => {
-        markDown(projectData)
+        return markDown(projectData);
+    })
+    .then(readmePage => {
+        return writeToFile(readmePage);
+    })
+    .then(writeToFileResponse => {
+        console.log(writeToFileResponse)
+    })
+    .catch(err => {
+        console.log(err);
     });
