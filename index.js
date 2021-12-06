@@ -23,7 +23,7 @@ const promptUser = () => {
         },
         {
             name: 'username',
-            mesage: 'What is your Github Username?',
+            message: 'What is your Github Username?',
             validate: gitHubUser => {
                 if(gitHubUser){
                     return true;
@@ -115,7 +115,7 @@ const projectPrompt = projectData => {
         },
         {
             name: 'contribution',
-            message: 'Create a list of rules for contribution (write your contribtuion rules as a markdown list using "-" to signify each point):',
+            message: 'Create a list of rules for contribution:',
             validate: contribute => {
                 if(contribute){
                     return true;

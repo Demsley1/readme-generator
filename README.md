@@ -29,5 +29,10 @@ Here is a link to a repo that details how you should design a professional readm
 
 Here are some Screenshots of an example readme generated from this app. 
 
+![Screenshot1](./Images/Screen1.png)
+![Screenshot2](./Images/Screen2.png)
+![Screenshot3](./Images/Screen3.png)
 
 Here is a link to a video demonstration file for the readme-generator app. 
+
+- [Video Link](https://watch.screencastify.com/v/YICBZSSkAO6lV2sQm5oi)

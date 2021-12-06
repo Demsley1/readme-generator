@@ -19,7 +19,7 @@ const renderLicenseBadge = license => {
 const renderLicenseSection = (license, name)=> {
   switch (license.valueOf()){
     case 'ApacheLicense':
-      return `Copyright 2021 ${name}
+      return `Copyright 2021 &copy; ${name}
 
       Licensed under the Apache License, Version 2.0 (the "License");
       you may not use this file except in compliance with the License.
@@ -34,7 +34,7 @@ const renderLicenseSection = (license, name)=> {
       limitations under the License.`
       
     case 'GNUGPLv3':
-      return `Copyright (C) 2021  ${name}
+      return `Copyright 2021 (C) ${name}
 
       This program is free software: you can redistribute it and/or modify
       it under the terms of the GNU General Public License as published by
@@ -50,7 +50,7 @@ const renderLicenseSection = (license, name)=> {
       along with this program.  If not, see https://www.gnu.org/licenses. `
       
     case 'MIT':
-      return `Copyright 2021 ${name}
+      return `Copyright 2021 &copy; ${name}
 
       Permission is hereby granted, free of charge, to any person obtaining a 
       copy of this software and associated documentation files (the "Software"), 
@@ -67,7 +67,7 @@ const renderLicenseSection = (license, name)=> {
       `
     
     case 'ISC':
-      return `Copyright 2021 ${name}
+      return `Copyright 2021 &copy; ${name}
 
       Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
       
